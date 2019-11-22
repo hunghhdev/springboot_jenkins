@@ -12,6 +12,7 @@ public class HelloController {
     @GetMapping({"/", "/hello"})
     public String hello(Model model, @RequestParam(value="name", required=false, defaultValue="World") String name) {
         model.addAttribute("name", name);
+        if(true) int x = 0;
         return "hello";
     }
 }
